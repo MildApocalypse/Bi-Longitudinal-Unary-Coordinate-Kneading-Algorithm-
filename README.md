@@ -23,4 +23,4 @@ This is the only parallelizable step. i.e: one thread per row, one block (group 
 - Step 4: Add segments
   - Once all loops and shape merges caused by this row of segments have been resolved, lines can be transferred from the segment buffer into the edge lists. In the cases of multiple segments touching the same previous segment in the row above, new edglists must be created for that shape.
 
-This prototype algorithm lacks actual parallelization and has no functionality to actually write to a shapefile. It can currently only read and construct shape objects composed of edge lists from ASCII Grid files.
+This algorithm is a prototype and as such does not actually include the aforementioned parallelization and shapefile creation. It can currently only read and construct shape objects composed of edge lists from ASCII Grid files.
